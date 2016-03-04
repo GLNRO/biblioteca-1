@@ -11,10 +11,9 @@ public class Biblioteca {
     private List<Book> listOfBooks;
 
 
-    public Biblioteca(PrintStream printStream, List<Book> listOfBooks, BufferedReader reader) {
+    public Biblioteca(PrintStream printStream, List<Book> listOfBooks) {
         this.printStream = printStream;
         this.listOfBooks = listOfBooks;
-        this.reader = reader ;
     }
 
     public void greetCustomer() {

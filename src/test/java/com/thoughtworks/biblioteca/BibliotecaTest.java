@@ -16,7 +16,6 @@ public class BibliotecaTest {
     private PrintStream printStream;
     private Book book;
     private List<Book> listOfBooks;
-    private BufferedReader reader;
     private Menu menu;
 
     @Before
@@ -25,9 +24,8 @@ public class BibliotecaTest {
         listOfBooks = new ArrayList<Book>();
         book = mock(Book.class);
         listOfBooks.add(book) ;
-        reader = mock(BufferedReader.class);
         menu = mock(Menu.class);
-        biblioteca = new Biblioteca(printStream, listOfBooks, reader);
+        biblioteca = new Biblioteca(printStream, listOfBooks);
     }
 
     @Test

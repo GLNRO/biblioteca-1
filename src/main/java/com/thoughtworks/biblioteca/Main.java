@@ -14,7 +14,7 @@ public class Main {
         listOfBooks.add(new Book(printStream,"50 Shades of Grey","EL James",2011));
         listOfBooks.add(new Book(printStream,"Twilight","Stephanie Meyers",2005));
         BufferedReader reader = new BufferedReader((new InputStreamReader(System.in)));
-        Biblioteca biblioteca = new Biblioteca(printStream,  listOfBooks, reader);
+        Biblioteca biblioteca = new Biblioteca(printStream,  listOfBooks);
         biblioteca.greetCustomer();
         QuitCommand quitCommand = new QuitCommand(printStream);
         Menu menu = new Menu(printStream,reader, biblioteca, quitCommand);
