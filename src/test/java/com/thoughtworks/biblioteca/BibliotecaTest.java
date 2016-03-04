@@ -2,8 +2,8 @@ package com.thoughtworks.biblioteca;
 
 import org.junit.Before;
 import org.junit.Test;
-import org.mockito.InOrder;
 
+import java.io.BufferedReader;
 import java.io.PrintStream;
 import java.util.ArrayList;
 import java.util.List;
@@ -16,7 +16,7 @@ public class BibliotecaTest {
     private PrintStream printStream;
     private Book book;
     private List<Book> listOfBooks;
-    private UserScanner scanner;
+    private BufferedReader reader;
     private Menu menu;
 
     @Before
@@ -25,9 +25,9 @@ public class BibliotecaTest {
         listOfBooks = new ArrayList<Book>();
         book = mock(Book.class);
         listOfBooks.add(book) ;
-        scanner = mock(UserScanner.class) ;
+        reader = mock(BufferedReader.class);
         menu = mock(Menu.class);
-        biblioteca = new Biblioteca(printStream, listOfBooks, scanner);
+        biblioteca = new Biblioteca(printStream, listOfBooks, reader);
     }
 
     @Test

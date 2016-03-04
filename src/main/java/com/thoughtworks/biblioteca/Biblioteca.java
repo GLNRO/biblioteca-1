@@ -1,19 +1,20 @@
 package com.thoughtworks.biblioteca;
 
+import java.io.BufferedReader;
 import java.io.PrintStream;
 import java.util.List;
 
 public class Biblioteca {
 
-    private UserScanner scanner;
+    private BufferedReader reader;
     private PrintStream printStream;
     private List<Book> listOfBooks;
 
 
-    public Biblioteca(PrintStream printStream, List<Book> listOfBooks, UserScanner scanner) {
+    public Biblioteca(PrintStream printStream, List<Book> listOfBooks, BufferedReader reader) {
         this.printStream = printStream;
         this.listOfBooks = listOfBooks;
-        this.scanner = scanner ;
+        this.reader = reader ;
     }
 
     public void greetCustomer() {
