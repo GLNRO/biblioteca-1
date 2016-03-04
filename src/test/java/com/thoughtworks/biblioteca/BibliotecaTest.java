@@ -17,6 +17,7 @@ public class BibliotecaTest {
     private Book book;
     private List<Book> listOfBooks;
     private Menu menu;
+    private String  string;
 
     @Before
     public void setUp(){
